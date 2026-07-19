@@ -1,0 +1,69 @@
+{
+  "profile": {
+    "name": "Rayane Bouzroura",
+    "title": "Développeur junior · Soutien TI",
+    "location": "Blainville, QC",
+    "email": "rayanebouzroura@gmail.com",
+    "phone": "(438) 408-3885",
+    "github": "https://github.com/raysam1998",
+    "languages": [
+      "Français (maternelle)",
+      "Anglais (avancé)",
+      "Arabe (intermédiaire)"
+    ],
+    "blurb": "Développeur junior avec des bases solides en C#/.NET, Angular, Flutter et SQL, à l'aise en environnement Linux. Formation collégiale en informatique (non complétée), disponible immédiatement dans la région de Montréal–Laval."
+  },
+  "cvs": [
+    {
+      "id": "dev-junior",
+      "label_fr": "CV — Développeur junior",
+      "description_fr": "Profil orienté développement logiciel : C#/.NET, Angular, Flutter, SQL.",
+      "file": "CV_Rayane_Bouzroura_Dev_Junior.pdf",
+      "updated": "2026-07-19"
+    },
+    {
+      "id": "soutien-ti",
+      "label_fr": "CV — Soutien TI",
+      "description_fr": "Profil orienté support technique et infrastructure.",
+      "file": "CV_Rayane_Bouzroura_Soutien_TI.pdf",
+      "updated": "2026-07-19"
+    },
+    {
+      "id": "service-client",
+      "label_fr": "CV — Service client",
+      "description_fr": "Profil orienté relation client et service à la clientèle.",
+      "file": "CV_Rayane_Bouzroura_Service_Client.pdf",
+      "updated": "2026-07-19"
+    }
+  ],
+  "projects": [
+    {
+      "name": "aram-leaderboard",
+      "tech": "JavaScript",
+      "description_fr": "Application frontend + backend pour suivre un classement (leaderboard) de statistiques ARAM.",
+      "repo_url": "https://github.com/raysam1998/aram-leaderboard",
+      "live_url": ""
+    },
+    {
+      "name": "spotInsight",
+      "tech": "TypeScript · React · Node.js",
+      "description_fr": "Application d'analyse Spotify pour visualiser ses habitudes d'écoute et modifier ses playlists.",
+      "repo_url": "https://github.com/raysam1998/spotInsight",
+      "live_url": ""
+    },
+    {
+      "name": "gacha-usin-friends",
+      "tech": "Next.js · TypeScript · Supabase",
+      "description_fr": "Site de tirage de cartes gacha pour un groupe d'amis, avec vote de propositions et collection.",
+      "repo_url": "https://github.com/raysam1998/gacha-usin-friends",
+      "live_url": "https://gacha-usin-friends.vercel.app"
+    },
+    {
+      "name": "LH-portfolio",
+      "tech": "HTML · CSS · JavaScript",
+      "description_fr": "Site portfolio pour un designer graphique, avec plusieurs propositions de design en HTML/CSS/JS pur.",
+      "repo_url": "https://github.com/raysam1998/LH-portfolio",
+      "live_url": ""
+    }
+  ]
+}

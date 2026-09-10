@@ -66,8 +66,9 @@ async function renderCvs(cvs) {
   }
 }
 
-function renderProjects(projects) {
-  const grid = document.getElementById("projects-grid");
+function renderProjects(projects, gridId) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
   grid.innerHTML = (projects || [])
     .map(
       (p) => `
@@ -75,6 +76,7 @@ function renderProjects(projects) {
       <h3>${escapeHtml(p.name)}</h3>
       <div class="card-tech">${escapeHtml(p.tech)}</div>
       <p>${escapeHtml(p.description_fr)}</p>
+      ${p.status ? `<div class="card-meta">${escapeHtml(p.status)}</div>` : ""}
       <div class="card-actions">
         ${p.repo_url ? `<a class="btn" href="${escapeHtml(p.repo_url)}" target="_blank" rel="noopener">Code</a>` : ""}
         ${p.live_url ? `<a class="btn btn-primary" href="${escapeHtml(p.live_url)}" target="_blank" rel="noopener">Démo</a>` : ""}
@@ -92,7 +94,13 @@ async function init() {
   const data = await res.json();
 
   renderProfile(data.profile);
-  renderProjects(data.projects);
+
+  // "En cours" only shows up when there is something in flight.
+  const wip = data.wip || [];
+  document.getElementById("wip").hidden = wip.length === 0;
+  renderProjects(wip, "wip-grid");
+
+  renderProjects(data.projects, "projects-grid");
   await renderCvs(data.cvs);
 }
 

@@ -36,6 +36,16 @@
       "updated": "2026-07-19"
     }
   ],
+  "wip": [
+    {
+      "name": "Suivi facial en temps réel",
+      "tech": "JavaScript · MediaPipe · WebAssembly · Canvas 2D",
+      "description_fr": "Détection et suivi de visage à 30 images par seconde directement dans le navigateur : 478 points de repère via MediaPipe Face Landmarker (WebAssembly + WebGL), superposition dessinée en Canvas 2D et ancrée sur la tête, qui suit sa position, son échelle et son inclinaison. Aucune image n'est transmise à un serveur — tout le traitement se fait sur l'appareil. Site statique, sans backend ni étape de build.",
+      "status": "En cours · prototype",
+      "repo_url": "https://github.com/raysam1998/chud-or-chad",
+      "live_url": "https://raysam1998.github.io/chud-or-chad/"
+    }
+  ],
   "projects": [
     {
       "name": "aram-leaderboard",

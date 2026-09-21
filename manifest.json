@@ -44,6 +44,14 @@
       "status": "En cours · prototype",
       "repo_url": "https://github.com/raysam1998/chud-or-chad",
       "live_url": "https://raysam1998.github.io/chud-or-chad/"
+    },
+    {
+      "name": "Nose Tracker",
+      "tech": "TypeScript · Vite · MediaPipe · Web Audio",
+      "description_fr": "Mini-jeu contrôlé au nez : on vise avec le nez et on tire en clignant des yeux. Suivi facial MediaPipe dans le navigateur, détection de clignement calibrée pour chaque utilisateur (seuils, hystérésis, durée maximale), lissage One Euro, zone d'atteinte calibrée, manches chronométrées avec niveaux de difficulté, images importables et sons générés avec Web Audio. Aucune image de la caméra ne quitte l'appareil.",
+      "status": "En cours · prototype",
+      "repo_url": "",
+      "live_url": "https://raysam1998.github.io/nose-tracker/"
     }
   ],
   "projects": [

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nose Tracker</title>
+    <script type="module" crossorigin src="/nose-tracker/assets/index-Bho35wwK.js"></script>
+    <link rel="stylesheet" crossorigin href="/nose-tracker/assets/index-D0gmxrmu.css">
+  </head>
+  <body>
+    <h1>Nose Tracker</h1>
+
+    <div id="layout">
+      <main>
+        <!-- Score bar, sits on top of the game. -->
+        <div id="hud">
+          <span id="score">Score: 0</span>
+          <!-- Browsers only allow camera access after a user gesture, so we start on a click. -->
+          <button id="start">Start camera</button>
+          <button id="calibrate" disabled>Calibrate</button>
+          <button id="reach" disabled>Calibrate reach</button>
+          <button id="play" disabled>Start round</button>
+          <button id="reset" disabled>Stop</button>
+        </div>
+        <p id="status">Idle. Aim with your nose, blink (or press Space) to shoot the targets.</p>
+        <!-- Calibration / test instructions. Hidden while playing. -->
+        <p id="calib" hidden></p>
+
+        <!--
+          The stage stacks two layers at the exact same size:
+            1. <video>  : the raw webcam feed
+            2. <canvas> : a transparent layer we draw the game on
+        -->
+        <div id="stage">
+          <video id="webcam" autoplay playsinline muted></video>
+          <canvas id="overlay"></canvas>
+          <!-- Countdown / results. HTML, not canvas, so the text isn't mirrored. -->
+          <div id="banner" hidden></div>
+        </div>
+
+        <!-- Debug: eye-closure score over time. Drawn by src/graph.ts -->
+        <canvas id="graph" width="640" height="120"></canvas>
+        <p class="legend">
+          Eye closure, last 10 s. Black = score, solid gray = "closed above", dashed = "open below",
+          green = shot fired, orange = rejected (closed too long).
+        </p>
+      </main>
+
+      <!-- Filled by src/panel.ts -->
+      <aside>
+        <!-- Filled by src/imagesPanel.ts -->
+        <div id="images"></div>
+        <h2>Settings</h2>
+        <div id="panel"></div>
+      </aside>
+    </div>
+
+    <footer>
+      <!-- CC BY 4.0 requires crediting the author. -->
+      Announcer voice: "Old-school arena FPS announcer voice lines" by jkerman,
+      <a href="https://freesound.org/s/718360/">freesound.org/s/718360</a>, license
+      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+    </footer>
+
+    <!-- Vite serves this TypeScript file directly during dev. -->
+  </body>
+</html>
